@@ -118,5 +118,18 @@ namespace RemiLib.Logic.Common.Tests
             }
             Assert.AreEqual(TestProgressBar.max, progressBar.Value);
         }
+
+        [Test]
+        public void TestChunksTracker()
+        {
+            BasicProgressTracker basicProgressTracker = new BasicProgressTracker(updateProgress);
+            ChunksProgressTracker chunksProgressTracker = new ChunksProgressTracker(basicProgressTracker, 10);
+            for(int i = 0; i < 10; ++i)
+            {
+                Assert.DoesNotThrow(() => chunksProgressTracker.Update());
+            }
+            Assert.Throws<InvalidOperationException>(() => chunksProgressTracker.Update());
+            Assert.AreEqual(TestProgressBar.max, progressBar.Value);
+        }
     }
 }
