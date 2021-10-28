@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemiLib.Logic", "RemiLib.Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemiLib.Logic.Common", "RemiLib.Logic\RemiLib.Logic.Common\RemiLib.Logic.Common.csproj", "{DA998584-4286-4FA6-B4DE-05A38142A5C8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C4BFFE29-5EF0-4E72-A89C-E0EED6CB68C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemiLib.Logic.Common.Tests", "RemiLib.Logic\Tests\RemiLib.Logic.Common.Tests\RemiLib.Logic.Common.Tests.csproj", "{066401F7-D61C-442F-884E-D8C4373428B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{DA998584-4286-4FA6-B4DE-05A38142A5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA998584-4286-4FA6-B4DE-05A38142A5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA998584-4286-4FA6-B4DE-05A38142A5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066401F7-D61C-442F-884E-D8C4373428B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066401F7-D61C-442F-884E-D8C4373428B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066401F7-D61C-442F-884E-D8C4373428B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066401F7-D61C-442F-884E-D8C4373428B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,8 @@ Global
 		{3ED0A587-E28D-42FA-AE89-3E7F0FBC64A7} = {64F9F62C-30DD-4181-B346-4F3E4F441C2D}
 		{2D0EBAE1-824C-414A-9AD7-64C5E983B5AE} = {64F9F62C-30DD-4181-B346-4F3E4F441C2D}
 		{DA998584-4286-4FA6-B4DE-05A38142A5C8} = {CA281D60-7231-4E0F-9DA3-DBB0254CF8CA}
+		{C4BFFE29-5EF0-4E72-A89C-E0EED6CB68C7} = {CA281D60-7231-4E0F-9DA3-DBB0254CF8CA}
+		{066401F7-D61C-442F-884E-D8C4373428B2} = {C4BFFE29-5EF0-4E72-A89C-E0EED6CB68C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93C9999B-C90D-4BC1-B2FD-A8304A7CD8C1}
