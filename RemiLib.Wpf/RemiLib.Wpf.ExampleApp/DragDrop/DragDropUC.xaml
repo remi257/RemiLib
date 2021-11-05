@@ -4,9 +4,59 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RemiLib.Wpf.ExampleApp.DragDrop"
+             xmlns:dd="urn:gong-wpf-dragdrop"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" d:Background="#272727" d:DataContext="{d:DesignInstance Type=local:DragDropVM, IsDesignTimeCreatable=True}">
+    <UserControl.DataContext>
+        <local:DragDropVM/>
+    </UserControl.DataContext>
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding ListViewCollection}" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True">
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="{x:Type local:DragDropModel}">
+                    <StackPanel>
+                        <Border BorderBrush="Red" BorderThickness="1">
+                            <TextBlock Margin="5" Text="{Binding Text.Value }"/>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ItemsControl ItemsSource="{Binding ItemsControlCollection}" Grid.Column="1" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type local:DragDropModel}">
+                    <Border BorderBrush="Red" BorderThickness="1">
+                        <TextBlock Margin="5" Text="{Binding Text.Value }"/>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl ItemsSource="{Binding DockPanelCollection}" Grid.Row="1" dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type local:DragDropModel}">
+                    <Border BorderBrush="Red" BorderThickness="1">
+                        <TextBlock Margin="5" Text="{Binding Text.Value }"/>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>

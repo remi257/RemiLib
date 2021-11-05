@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="gong-wpf-dragdrop" Version="2.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RemiLib.Wpf.Converters\RemiLib.Wpf.Converters.csproj" />
     <ProjectReference Include="..\RemiLib.Wpf.Observable\RemiLib.Wpf.Observable.csproj" />
   </ItemGroup>

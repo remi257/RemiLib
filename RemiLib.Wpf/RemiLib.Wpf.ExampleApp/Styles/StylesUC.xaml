@@ -16,5 +16,10 @@
             <ListViewItem>bb</ListViewItem>
             <ListViewItem>cc</ListViewItem>
         </ListView>
+        <ComboBox>
+            <ComboBoxItem>12</ComboBoxItem>
+            <ComboBoxItem>13</ComboBoxItem>
+            <ComboBoxItem>14</ComboBoxItem>
+        </ComboBox>
     </StackPanel>
 </UserControl>
