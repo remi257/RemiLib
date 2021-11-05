@@ -4,9 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RemiLib.Wpf.ExampleApp"
+        xmlns:obs="clr-namespace:RemiLib.Wpf.ExampleApp.Observable"
+        xmlns:styles="clr-namespace:RemiLib.Wpf.ExampleApp.Styles"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="StylesDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-
+        <TabControl>
+            <TabItem Header="Styles">
+                <styles:StylesUC/>
+            </TabItem>
+            <TabItem Header="Observable">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock TextAlignment="Center">Showcase of ObservableProperty class.</TextBlock>
+                    <obs:ObservableUC/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="DragDrop"/>
+        </TabControl>
     </Grid>
 </Window>
