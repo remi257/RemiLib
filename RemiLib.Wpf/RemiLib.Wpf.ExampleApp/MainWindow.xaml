@@ -12,10 +12,13 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="StylesDictionary.xaml"/>
+                <ResourceDictionary x:Name="Dictionary" Source="StylesDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    <!--<Window.Background>
+        <SolidColorBrush  Color="Red"/>
+    </Window.Background>-->
     <Grid>
         <TabControl>
             <TabItem Header="Styles">

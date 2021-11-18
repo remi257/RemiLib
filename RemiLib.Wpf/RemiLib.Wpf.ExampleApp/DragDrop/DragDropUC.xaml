@@ -53,7 +53,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate DataType="{x:Type local:DragDropModel}">
                     <Border BorderBrush="Red" BorderThickness="1">
-                        <TextBlock Margin="5" Text="{Binding Text.Value }"/>
+                        <TextBlock Margin="5" Text="{Binding Number.Value }"/>
                     </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
